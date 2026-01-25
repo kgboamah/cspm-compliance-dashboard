@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: cspm-db
+    environment:
+      POSTGRES_DB: cspm_dashboard
+      POSTGRES_USER: cspm_user
+      POSTGRES_PASSWORD: cspm_password_dev
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    networks:
+      - cspm-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cspm_user -d cspm_dashboard"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API (FastAPI)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cspm-backend
+    environment:
+      DATABASE_URL: postgresql://cspm_user:cspm_password_dev@postgres:5432/cspm_dashboard
+      SECRET_KEY: dev-secret-key-change-in-production
+      ENVIRONMENT: development
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - cspm-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Frontend (React)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cspm-frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    depends_on:
+      - backend
+    networks:
+      - cspm-network
+    command: npm start
+
+volumes:
+  postgres_data:
+
+networks:
+  cspm-network:
+    driver: bridge
