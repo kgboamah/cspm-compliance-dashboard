@@ -9,9 +9,9 @@ CREATE TABLE cloud_accounts (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     account_name VARCHAR(255) NOT NULL,
     cloud_provider VARCHAR(50) NOT NULL CHECK (cloud_provider IN ('AWS', 'Azure', 'GCP')),
-    account_id VARCHAR(50) NOT NULL UNIQUE,
-    access_credentials JSONB,
-    regions TEXT[],
+    account_id VARCHAR(225) NOT NULL UNIQUE,
+    credentials JSONB DEFAULT '{}'::jsonb NOT NULL,
+    regions JSONB DEFAULT '[]'::jsonb NOT NULL,
     is_active BOOLEAN DEFAULT TRUE,
     last_scanned_at TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -138,5 +138,3 @@ $$ language 'plpgsql';
 -- Apply trigger to cloud_accounts
 CREATE TRIGGER update_cloud_accounts_updated_at BEFORE UPDATE ON cloud_accounts
 FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
-
--

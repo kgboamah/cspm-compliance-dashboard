@@ -205,3 +205,40 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+credentials
+# --- generated output ---
+prowler-output/
+output/
+*.pdf
+*.sql.gz
+backup*.sql
+# --- python / node ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+node_modules/
+frontend/build/
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+backend/migrations/add_users_table.py
+backend/migrations/reset_admin_password.py
+backend/seed_complete.py
+backend/test_prowler_integration.py
+postgres_backup_20260301_171124/base/16384/16396
+postgres_backup_20260301_171124/pg_wal/000000010000000000000001
+postgres_data_restored/base/16384/16396
+postgres_data_restored/pg_wal/000000010000000000000001
+backend/app/routers/scans.py
+backend/migrations/add_mfa_support.py
+backend/weekly_email_scheduler.py
+frontend/src/components/EmailPDFButton.jsx

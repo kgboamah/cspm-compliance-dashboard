@@ -1,0 +1,158 @@
+[
+  {
+    "check_id": "iam_user_mfa_enabled",
+    "check_title": "Ensure MFA is enabled for all IAM users",
+    "service": "iam",
+    "severity": "High",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.9.2"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.AC-1"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "8.2.1"
+      },
+      {
+        "framework": "CIS AWS",
+        "control_id": "1.4"
+      }
+    ]
+  },
+  {
+    "check_id": "iam_root_hardware_mfa_enabled",
+    "check_title": "Ensure hardware MFA is enabled for the root account",
+    "service": "iam",
+    "severity": "Critical",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.9.2"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.AC-1"
+      },
+      {
+        "framework": "CIS AWS",
+        "control_id": "1.4"
+      }
+    ]
+  },
+  {
+    "check_id": "s3_bucket_public_access",
+    "check_title": "Ensure S3 buckets do not allow public access",
+    "service": "s3",
+    "severity": "High",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.13.1"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.DS-1"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "1.1.1"
+      },
+      {
+        "framework": "CIS AWS",
+        "control_id": "2.1.1"
+      }
+    ]
+  },
+  {
+    "check_id": "s3_bucket_encryption",
+    "check_title": "Ensure S3 buckets have encryption enabled",
+    "service": "s3",
+    "severity": "Medium",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.10.1"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.DS-1"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "3.4"
+      },
+      {
+        "framework": "CIS AWS",
+        "control_id": "2.1.1"
+      }
+    ]
+  },
+  {
+    "check_id": "cloudtrail_multi_region_enabled",
+    "check_title": "Ensure CloudTrail is enabled in all regions",
+    "service": "cloudtrail",
+    "severity": "High",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.12.4"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "DE.AE-3"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "10.1"
+      },
+      {
+        "framework": "CIS AWS",
+        "control_id": "3.1"
+      }
+    ]
+  },
+  {
+    "check_id": "ec2_instance_public_ip",
+    "check_title": "Ensure EC2 instances do not have public IPs",
+    "service": "ec2",
+    "severity": "Medium",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.13.1"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.AC-5"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "1.2.1"
+      }
+    ]
+  },
+  {
+    "check_id": "iam_policy_no_full_access_to_cloudtrail",
+    "check_title": "Ensure IAM policies do not allow full access to CloudTrail",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {
+        "framework": "ISO 27001",
+        "control_id": "A.9.4"
+      },
+      {
+        "framework": "NIST CSF",
+        "control_id": "PR.AC-4"
+      },
+      {
+        "framework": "PCI-DSS",
+        "control_id": "7.1"
+      }
+    ]
+  }
+]

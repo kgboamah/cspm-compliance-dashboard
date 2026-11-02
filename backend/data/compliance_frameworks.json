@@ -1,0 +1,46 @@
+[
+  {
+    "name": "ISO 27001",
+    "description": "International standard for information security management",
+    "version": "2013",
+    "is_active": true,
+    "metadata": {
+      "full_name": "ISO/IEC 27001:2013",
+      "organization": "International Organization for Standardization",
+      "url": "https://www.iso.org/isoiec-27001-information-security.html"
+    }
+  },
+  {
+    "name": "NIST CSF",
+    "description": "NIST Cybersecurity Framework",
+    "version": "1.1",
+    "is_active": true,
+    "metadata": {
+      "full_name": "NIST Cybersecurity Framework v1.1",
+      "organization": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/cyberframework"
+    }
+  },
+  {
+    "name": "PCI-DSS",
+    "description": "Payment Card Industry Data Security Standard",
+    "version": "4.0",
+    "is_active": true,
+    "metadata": {
+      "full_name": "PCI DSS v4.0",
+      "organization": "PCI Security Standards Council",
+      "url": "https://www.pcisecuritystandards.org/"
+    }
+  },
+  {
+    "name": "CIS AWS",
+    "description": "CIS Amazon Web Services Foundations Benchmark",
+    "version": "1.5.0",
+    "is_active": true,
+    "metadata": {
+      "full_name": "CIS AWS Foundations Benchmark v1.5.0",
+      "organization": "Center for Internet Security",
+      "url": "https://www.cisecurity.org/benchmark/amazon_web_services"
+    }
+  }
+]

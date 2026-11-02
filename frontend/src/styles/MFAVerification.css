@@ -1,0 +1,226 @@
+/**
+ * MFA Verification Styles
+ * Location: frontend/src/styles/MFAVerification.css
+ */
+
+.mfa-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #028090 0%, #02c39a 100%);
+  padding: 20px;
+}
+
+.mfa-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 48px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mfa-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.mfa-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 12px 0;
+}
+
+.mfa-description {
+  font-size: 16px;
+  color: #4a5568;
+  margin: 0 0 8px 0;
+}
+
+.mfa-email {
+  font-size: 14px;
+  color: #028090;
+  font-weight: 600;
+  margin: 0 0 32px 0;
+}
+
+.mfa-code-inputs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.mfa-code-input {
+  width: 56px;
+  height: 64px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  border: 3px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.mfa-code-input:focus {
+  outline: none;
+  border-color: #028090;
+  box-shadow: 0 0 0 4px rgba(2, 128, 144, 0.1);
+  transform: scale(1.05);
+}
+
+.mfa-code-input:disabled {
+  background: #f7fafc;
+  cursor: not-allowed;
+}
+
+.mfa-error {
+  background: #fff5f5;
+  border: 2px solid #fc8181;
+  border-radius: 8px;
+  padding: 12px;
+  color: #c53030;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.mfa-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.btn-verify,
+.btn-resend,
+.btn-cancel {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-verify {
+  background: linear-gradient(135deg, #028090 0%, #02c39a 100%);
+  color: white;
+}
+
+.btn-verify:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 128, 144, 0.3);
+}
+
+.btn-verify:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-resend {
+  background: #edf2f7;
+  color: #2d3748;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-resend:hover:not(:disabled) {
+  background: #e2e8f0;
+  border-color: #cbd5e0;
+}
+
+.btn-resend:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #718096;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+.mfa-help {
+  text-align: left;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.mfa-help p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+}
+
+.mfa-help ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.mfa-help li {
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .mfa-card {
+    padding: 32px 24px;
+  }
+
+  .mfa-code-inputs {
+    gap: 8px;
+  }
+
+  .mfa-code-input {
+    width: 44px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .mfa-card h2 {
+    font-size: 24px;
+  }
+}

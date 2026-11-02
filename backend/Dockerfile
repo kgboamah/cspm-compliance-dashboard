@@ -8,11 +8,14 @@ RUN apt-get update && apt-get install -y \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first for better caching
+# Copy requirements
 COPY requirements.txt .
+COPY requirements-prowler.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+# Note: Prowler installation can be added later if needed
+RUN pip install --no-cache-dir -r requirements-prowler.txt
 
 # Copy application code
 COPY . .
@@ -20,5 +23,4 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Command will be overridden by docker-compose
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

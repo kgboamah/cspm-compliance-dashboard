@@ -1,0 +1,73 @@
+
+> async def get_scan_findings_breakdown(
+      scan_id: UUID, framework: Optional[str] = Query(None),
+      severity: Optional[str] = Query(None), status: Optional[str] = Query(None),
+      limit: int = Query(100, ge=1, le=1000), db: Session = Depends(get_db)
+  ):
+      """Get detailed findings breakdown"""
+      query = """
+          SELECT sf.id, sf.finding_details->>'check_id', sf.finding_details->>'check_title',
+                 sf.finding_status, sf.risk_level, sf.resource_id, sf.resource_type, sf.discovered_at,
+                 COALESCE(json_agg(DISTINCT jsonb_build_object(
+                     'framework', cf.framework_name, 'control_id', fc.control_id, 
+                     'control_title', fc.control_title
+                 )) FILTER (WHERE cf.framework_name IS NOT NULL), '[]') as mapped_controls
+          FROM scan_findings sf
+          LEFT JOIN technical_checks tc ON tc.check_name = (sf.finding_details->>'check_id')
+          LEFT JOIN control_check_mappings ccm ON ccm.check_id = tc.id
+          LEFT JOIN framework_controls fc ON fc.id = ccm.control_id
+          LEFT JOIN compliance_frameworks cf ON cf.id = fc.framework_id
+          WHERE sf.scan_id = :scan_id
+      """
+      params = {"scan_id": str(scan_id)}
+      if framework:
+          query += " AND cf.framework_name = :framework"
+          params["framework"] = framework
+      if severity:
+          query += " AND sf.risk_level = :severity"
+          params["severity"] = severity
+      if status:
+          query += " AND sf.finding_status = :status"
+          params["status"] = status
+      query += """
+          GROUP BY sf.id, sf.finding_details, sf.finding_status, sf.risk_level,
+                   sf.resource_id, sf.resource_type, sf.discovered_at
+          ORDER BY CASE sf.risk_level WHEN 'Critical' THEN 1 WHEN 'High' THEN 2 
+              WHEN 'Medium' THEN 3 WHEN 'Low' THEN 4 ELSE 5 END, sf.discovered_at DESC LIMIT :limit
+      """
+      params["limit"] = limit
+      results = db.execute(text(query), params).fetchall()
+      findings = [{
+          "finding_id": row[0], "check_id": row[1], "check_title": row[2], "status": row[3],
+          "severity": row[4], "resource_id": row[5], "resource_type": row[6],
+          "discovered_at": row[7].isoformat() if row[7] else None, "mapped_controls": row[8]
+      } for row in results]
+      
+      summary_query = text("""
+          SELECT risk_level, finding_status, COUNT(*) FROM scan_findings 
+          WHERE scan_id = :scan_id GROUP BY risk_level, finding_status
+          ORDER BY CASE risk_level WHEN 'Critical' THEN 1 WHEN 'High' THEN 2 
+              WHEN 'Medium' THEN 3 WHEN 'Low' THEN 4 ELSE 5 END
+      """)
+      summary_results = db.execute(summary_query, {"scan_id": str(scan_id)}).fetchall()
+      summary, total = {}, 0
+      for row in summary_results:
+          if row[0] not in summary:
+              summary[row[0]] = {"Pass": 0, "Fail": 0}
+          summary[row[0]][row[1]] = row[2]
+          total += row[2]
+      return {"scan_id": str(scan_id), "total_findings": total, 
+              "returned_findings": len(findings), "summary": summary, "findings": findings}
+  
+  @router.get("/account/{account_id}/recurring-findings")
+  async def get_recurring_findings(
+      account_id: UUID, min_occurrences: int = 2, severity: Optional[str] = None,
+      limit: int = 100, db: Session = Depends(get_db)
+  ):
+      """Get recurring findings"""
+      from app.models.assessment_scan import AssessmentScan
+      from app.models.compliance_score import ComplianceScore
+      
+      scans_with_scores = db.query(AssessmentScan.id).join(
+          ComplianceScore, AssessmentScan.id == ComplianceScore.scan_id
+

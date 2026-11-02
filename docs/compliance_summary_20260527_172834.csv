@@ -1,0 +1,5 @@
+Framework,Compliance Score (%),Controls Passed,Controls Failed,Controls N/A,Total Controls,Critical,High,Medium,Low,Total Findings,Scan Date
+ISO 27001,69.3,55,24,0,79,5,11,16,8,40,2026-03-30 05:45:28
+NIST CSF,73.5,62,22,3,87,4,9,14,7,34,2026-03-30 05:45:28
+PCI-DSS,74.8,49,17,10,76,3,8,12,6,29,2026-03-30 05:45:28
+CIS AWS,70.2,58,25,6,89,6,10,15,9,40,2026-03-30 05:45:28

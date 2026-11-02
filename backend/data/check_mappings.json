@@ -1,0 +1,763 @@
+[
+  {
+    "check_id": "accessanalyzer_enabled",
+    "check_title": "Ensure IAM Access Analyzer is enabled",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-4"},
+      {"framework": "CIS AWS", "control_id": "1.20"}
+    ]
+  },
+  {
+    "check_id": "account_maintain_different_contact_details_to_security_billing_and_operations",
+    "check_title": "Ensure contact details for security, billing and operations are registered",
+    "service": "account",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.6.1"},
+      {"framework": "CIS AWS", "control_id": "1.1"},
+      {"framework": "CIS AWS", "control_id": "1.2"}
+    ]
+  },
+  {
+    "check_id": "athena_workgroup_encryption",
+    "check_title": "Ensure Athena workgroups encrypt query results",
+    "service": "athena",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.4"}
+    ]
+  },
+  {
+    "check_id": "athena_workgroup_enforce_configuration",
+    "check_title": "Ensure Athena workgroups enforce configuration",
+    "service": "athena",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.1"},
+      {"framework": "NIST CSF", "control_id": "PR.IP-1"},
+      {"framework": "PCI-DSS", "control_id": "2.2"}
+    ]
+  },
+  {
+    "check_id": "backup_vaults_exist",
+    "check_title": "Ensure AWS Backup vaults exist",
+    "service": "backup",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.3"},
+      {"framework": "ISO 27001", "control_id": "A.17.1"},
+      {"framework": "NIST CSF", "control_id": "RC.RP-1"}
+    ]
+  },
+  {
+    "check_id": "cloudtrail_multi_region_enabled",
+    "check_title": "Ensure CloudTrail is enabled in all regions",
+    "service": "cloudtrail",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-3"},
+      {"framework": "PCI-DSS", "control_id": "10.1"},
+      {"framework": "CIS AWS", "control_id": "3.1"}
+    ]
+  },
+  {
+    "check_id": "cloudtrail_multi_region_enabled_logging_management_events",
+    "check_title": "Ensure CloudTrail logs management events",
+    "service": "cloudtrail",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "PR.PT-1"},
+      {"framework": "PCI-DSS", "control_id": "10.2"},
+      {"framework": "CIS AWS", "control_id": "3.1"}
+    ]
+  },
+  {
+    "check_id": "cloudtrail_s3_dataevents_read_enabled",
+    "check_title": "Ensure S3 object-level read logging is enabled",
+    "service": "cloudtrail",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-3"},
+      {"framework": "CIS AWS", "control_id": "3.11"}
+    ]
+  },
+  {
+    "check_id": "cloudtrail_s3_dataevents_write_enabled",
+    "check_title": "Ensure S3 object-level write logging is enabled",
+    "service": "cloudtrail",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-3"},
+      {"framework": "CIS AWS", "control_id": "3.10"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_changes_to_network_acls_alarm_configured",
+    "check_title": "Ensure alarm exists for Network ACL changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "CIS AWS", "control_id": "4.11"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_changes_to_network_gateways_alarm_configured",
+    "check_title": "Ensure alarm exists for network gateway changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "CIS AWS", "control_id": "4.12"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_changes_to_network_route_tables_alarm_configured",
+    "check_title": "Ensure alarm exists for route table changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "CIS AWS", "control_id": "4.13"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_changes_to_vpcs_alarm_configured",
+    "check_title": "Ensure alarm exists for VPC changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "CIS AWS", "control_id": "4.14"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_and_alarm_for_aws_config_configuration_changes_enabled",
+    "check_title": "Ensure alarm exists for AWS Config changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-2"},
+      {"framework": "CIS AWS", "control_id": "4.9"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_and_alarm_for_cloudtrail_configuration_changes_enabled",
+    "check_title": "Ensure alarm exists for CloudTrail config changes",
+    "service": "cloudwatch",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-2"},
+      {"framework": "CIS AWS", "control_id": "4.5"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_authentication_failures",
+    "check_title": "Ensure alarm exists for console authentication failures",
+    "service": "cloudwatch",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-7"},
+      {"framework": "CIS AWS", "control_id": "4.6"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_aws_organizations_changes",
+    "check_title": "Ensure alarm exists for AWS Organizations changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.6.1"},
+      {"framework": "NIST CSF", "control_id": "ID.GV-1"},
+      {"framework": "CIS AWS", "control_id": "4.15"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_disable_or_scheduled_deletion_of_kms_cmk",
+    "check_title": "Ensure alarm exists for KMS key disabling/deletion",
+    "service": "cloudwatch",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.5"},
+      {"framework": "CIS AWS", "control_id": "4.7"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_for_s3_bucket_policy_changes",
+    "check_title": "Ensure alarm exists for S3 bucket policy changes",
+    "service": "cloudwatch",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-5"},
+      {"framework": "CIS AWS", "control_id": "4.8"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_policy_changes",
+    "check_title": "Ensure alarm exists for IAM policy changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-4"},
+      {"framework": "CIS AWS", "control_id": "4.4"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_root_usage",
+    "check_title": "Ensure alarm exists for root account usage",
+    "service": "cloudwatch",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "CIS AWS", "control_id": "4.3"},
+      {"framework": "CIS AWS", "control_id": "1.12"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_security_group_changes",
+    "check_title": "Ensure alarm exists for security group changes",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "CIS AWS", "control_id": "4.10"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_sign_in_without_mfa",
+    "check_title": "Ensure alarm exists for console sign-in without MFA",
+    "service": "cloudwatch",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.3"},
+      {"framework": "CIS AWS", "control_id": "4.2"}
+    ]
+  },
+  {
+    "check_id": "cloudwatch_log_metric_filter_unauthorized_api_calls",
+    "check_title": "Ensure alarm exists for unauthorized API calls",
+    "service": "cloudwatch",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.4"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-7"},
+      {"framework": "CIS AWS", "control_id": "4.1"}
+    ]
+  },
+  {
+    "check_id": "config_recorder_all_regions_enabled",
+    "check_title": "Ensure AWS Config is enabled in all regions",
+    "service": "config",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-3"},
+      {"framework": "CIS AWS", "control_id": "3.5"}
+    ]
+  },
+  {
+    "check_id": "drs_job_exist",
+    "check_title": "Ensure Disaster Recovery Service jobs exist",
+    "service": "drs",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.17.1"},
+      {"framework": "NIST CSF", "control_id": "RC.RP-1"}
+    ]
+  },
+  {
+    "check_id": "ec2_ebs_default_encryption",
+    "check_title": "Ensure EBS encryption is enabled by default",
+    "service": "ec2",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.4"},
+      {"framework": "CIS AWS", "control_id": "2.2.1"}
+    ]
+  },
+  {
+    "check_id": "ec2_instance_public_ip",
+    "check_title": "Ensure EC2 instances do not have public IP addresses",
+    "service": "ec2",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.2.1"},
+      {"framework": "CIS AWS", "control_id": "5.6"}
+    ]
+  },
+  {
+    "check_id": "ec2_networkacl_allow_ingress_any_port",
+    "check_title": "Ensure Network ACLs do not allow ingress from 0.0.0.0/0 to all ports",
+    "service": "ec2",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.2.1"},
+      {"framework": "CIS AWS", "control_id": "5.2"}
+    ]
+  },
+  {
+    "check_id": "ec2_networkacl_allow_ingress_tcp_port_22",
+    "check_title": "Ensure Network ACLs do not allow ingress from 0.0.0.0/0 to port 22",
+    "service": "ec2",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-3"},
+      {"framework": "PCI-DSS", "control_id": "1.2.1"},
+      {"framework": "CIS AWS", "control_id": "5.1"}
+    ]
+  },
+  {
+    "check_id": "ec2_networkacl_allow_ingress_tcp_port_3389",
+    "check_title": "Ensure Network ACLs do not allow ingress from 0.0.0.0/0 to port 3389",
+    "service": "ec2",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-3"},
+      {"framework": "PCI-DSS", "control_id": "1.2.1"}
+    ]
+  },
+  {
+    "check_id": "ec2_securitygroup_default_restrict_traffic",
+    "check_title": "Ensure default security group restricts all traffic",
+    "service": "ec2",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.1.1"},
+      {"framework": "CIS AWS", "control_id": "5.1"}
+    ]
+  },
+  {
+    "check_id": "glue_data_catalogs_connection_passwords_encryption_enabled",
+    "check_title": "Ensure Glue data catalog connection passwords are encrypted",
+    "service": "glue",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.4"}
+    ]
+  },
+  {
+    "check_id": "glue_data_catalogs_metadata_encryption_enabled",
+    "check_title": "Ensure Glue data catalog metadata is encrypted",
+    "service": "glue",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.4"}
+    ]
+  },
+  {
+    "check_id": "guardduty_is_enabled",
+    "check_title": "Ensure GuardDuty is enabled",
+    "service": "guardduty",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.6"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-4"},
+      {"framework": "PCI-DSS", "control_id": "11.4"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_expires_passwords_within_90_days_or_less",
+    "check_title": "Ensure IAM password policy expires passwords within 90 days",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.4"},
+      {"framework": "CIS AWS", "control_id": "1.22"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_lowercase",
+    "check_title": "Ensure IAM password policy requires lowercase letters",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.21"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_minimum_length_14",
+    "check_title": "Ensure IAM password policy requires minimum length of 14",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.14"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_number",
+    "check_title": "Ensure IAM password policy requires numbers",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.21"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_reuse_24",
+    "check_title": "Ensure IAM password policy prevents password reuse",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.15"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_symbol",
+    "check_title": "Ensure IAM password policy requires symbols",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.21"}
+    ]
+  },
+  {
+    "check_id": "iam_password_policy_uppercase",
+    "check_title": "Ensure IAM password policy requires uppercase letters",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.3"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.3"},
+      {"framework": "CIS AWS", "control_id": "1.21"}
+    ]
+  },
+  {
+    "check_id": "iam_policy_attached_only_to_group_or_roles",
+    "check_title": "Ensure IAM policies are attached only to groups or roles",
+    "service": "iam",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-4"},
+      {"framework": "PCI-DSS", "control_id": "7.2"},
+      {"framework": "CIS AWS", "control_id": "1.16"}
+    ]
+  },
+  {
+    "check_id": "iam_policy_no_full_access_to_cloudtrail",
+    "check_title": "Ensure no IAM policies allow full access to CloudTrail",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.4"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-4"},
+      {"framework": "PCI-DSS", "control_id": "7.1"}
+    ]
+  },
+  {
+    "check_id": "iam_root_hardware_mfa_enabled",
+    "check_title": "Ensure hardware MFA is enabled for root account",
+    "service": "iam",
+    "severity": "Critical",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.3"},
+      {"framework": "CIS AWS", "control_id": "1.6"}
+    ]
+  },
+  {
+    "check_id": "iam_root_mfa_enabled",
+    "check_title": "Ensure MFA is enabled for root account",
+    "service": "iam",
+    "severity": "Critical",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.3"},
+      {"framework": "CIS AWS", "control_id": "1.5"}
+    ]
+  },
+  {
+    "check_id": "iam_securityaudit_role_created",
+    "check_title": "Ensure support role is created for incident management",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.16.1"},
+      {"framework": "NIST CSF", "control_id": "RS.CO-2"},
+      {"framework": "CIS AWS", "control_id": "1.17"}
+    ]
+  },
+  {
+    "check_id": "iam_user_hardware_mfa_enabled",
+    "check_title": "Ensure hardware MFA is enabled for IAM users",
+    "service": "iam",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.3"}
+    ]
+  },
+  {
+    "check_id": "iam_user_mfa_enabled",
+    "check_title": "Ensure MFA is enabled for all IAM users",
+    "service": "iam",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.2.1"},
+      {"framework": "CIS AWS", "control_id": "1.10"}
+    ]
+  },
+  {
+    "check_id": "iam_user_mfa_enabled_console_access",
+    "check_title": "Ensure MFA is enabled for IAM users with console access",
+    "service": "iam",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "PCI-DSS", "control_id": "8.3"},
+      {"framework": "CIS AWS", "control_id": "1.10"}
+    ]
+  },
+  {
+    "check_id": "iam_user_with_temporary_credentials",
+    "check_title": "Ensure temporary credentials are used for third-party access",
+    "service": "iam",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.9.2"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-1"},
+      {"framework": "CIS AWS", "control_id": "1.11"}
+    ]
+  },
+  {
+    "check_id": "inspector2_findings_exist",
+    "check_title": "Ensure AWS Inspector findings are reviewed",
+    "service": "inspector",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.6"},
+      {"framework": "NIST CSF", "control_id": "ID.RA-1"},
+      {"framework": "PCI-DSS", "control_id": "6.2"}
+    ]
+  },
+  {
+    "check_id": "macie_is_enabled",
+    "check_title": "Ensure Amazon Macie is enabled",
+    "service": "macie",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.8.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-5"},
+      {"framework": "PCI-DSS", "control_id": "3.4"}
+    ]
+  },
+  {
+    "check_id": "networkfirewall_in_all_vpc",
+    "check_title": "Ensure AWS Network Firewall is deployed in all VPCs",
+    "service": "networkfirewall",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.1.1"},
+      {"framework": "CIS AWS", "control_id": "5.4"}
+    ]
+  },
+  {
+    "check_id": "organizations_account_part_of_organizations",
+    "check_title": "Ensure account is part of AWS Organizations",
+    "service": "organizations",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.6.1"},
+      {"framework": "NIST CSF", "control_id": "ID.GV-1"}
+    ]
+  },
+  {
+    "check_id": "organizations_scp_check_deny_regions",
+    "check_title": "Ensure Service Control Policies restrict regions",
+    "service": "organizations",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.6.1"},
+      {"framework": "NIST CSF", "control_id": "ID.GV-3"},
+      {"framework": "PCI-DSS", "control_id": "2.2"}
+    ]
+  },
+  {
+    "check_id": "organizations_tags_policies_enabled_and_attached",
+    "check_title": "Ensure tag policies are enabled and attached",
+    "service": "organizations",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.8.1"},
+      {"framework": "NIST CSF", "control_id": "ID.AM-1"}
+    ]
+  },
+  {
+    "check_id": "s3_account_level_public_access_blocks",
+    "check_title": "Ensure S3 account-level public access blocks are enabled",
+    "service": "s3",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "1.1.1"},
+      {"framework": "CIS AWS", "control_id": "2.1.5"}
+    ]
+  },
+  {
+    "check_id": "s3_bucket_encryption",
+    "check_title": "Ensure S3 buckets have encryption enabled",
+    "service": "s3",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.10.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "3.4"},
+      {"framework": "CIS AWS", "control_id": "2.1.1"}
+    ]
+  },
+  {
+    "check_id": "s3_bucket_public_access",
+    "check_title": "Ensure S3 buckets do not allow public access",
+    "service": "s3",
+    "severity": "High",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.DS-1"},
+      {"framework": "PCI-DSS", "control_id": "1.1.1"},
+      {"framework": "CIS AWS", "control_id": "2.1.2"}
+    ]
+  },
+  {
+    "check_id": "securityhub_enabled",
+    "check_title": "Ensure AWS Security Hub is enabled",
+    "service": "securityhub",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.6"},
+      {"framework": "NIST CSF", "control_id": "DE.CM-1"},
+      {"framework": "PCI-DSS", "control_id": "11.4"}
+    ]
+  },
+  {
+    "check_id": "ssmincidents_enabled_with_plans",
+    "check_title": "Ensure SSM Incident Manager is configured with response plans",
+    "service": "ssm",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.16.1"},
+      {"framework": "NIST CSF", "control_id": "RS.AN-1"}
+    ]
+  },
+  {
+    "check_id": "trustedadvisor_premium_support_plan_subscribed",
+    "check_title": "Ensure premium support plan is subscribed for Trusted Advisor",
+    "service": "support",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.6"},
+      {"framework": "NIST CSF", "control_id": "ID.RA-1"}
+    ]
+  },
+  {
+    "check_id": "vpc_different_regions",
+    "check_title": "Ensure VPCs exist in different regions for redundancy",
+    "service": "vpc",
+    "severity": "Low",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.17.1"},
+      {"framework": "NIST CSF", "control_id": "RC.RP-1"}
+    ]
+  },
+  {
+    "check_id": "vpc_flow_logs_enabled",
+    "check_title": "Ensure VPC flow logging is enabled",
+    "service": "vpc",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.12.4"},
+      {"framework": "NIST CSF", "control_id": "DE.AE-3"},
+      {"framework": "PCI-DSS", "control_id": "10.1"},
+      {"framework": "CIS AWS", "control_id": "3.9"}
+    ]
+  },
+  {
+    "check_id": "vpc_subnet_no_public_ip_by_default",
+    "check_title": "Ensure subnets do not auto-assign public IP addresses",
+    "service": "vpc",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.3.1"},
+      {"framework": "CIS AWS", "control_id": "5.6"}
+    ]
+  },
+  {
+    "check_id": "vpc_subnet_separate_private_public",
+    "check_title": "Ensure separate public and private subnets exist",
+    "service": "vpc",
+    "severity": "Medium",
+    "controls": [
+      {"framework": "ISO 27001", "control_id": "A.13.1"},
+      {"framework": "NIST CSF", "control_id": "PR.AC-5"},
+      {"framework": "PCI-DSS", "control_id": "1.3.1"},
+      {"framework": "CIS AWS", "control_id": "5.3"}
+    ]
+  }
+]

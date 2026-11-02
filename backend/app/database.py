@@ -6,25 +6,30 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 
-# Get database URL from environment variable
+# Database URL from environment
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql://cspm_user:cspm_password_dev@postgres:5432/cspm_dashboard"
 )
 
-# Create SQLAlchemy engine
-engine = create_engine(DATABASE_URL)
+# Create engine
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,  # Verify connections before using
+    echo=False  # Set to True to see SQL queries in logs
+)
 
-# Create SessionLocal class
+# Session factory
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Create Base class for models
+# Base class for models
 Base = declarative_base()
 
+# Dependency for FastAPI
 def get_db():
     """
-    Dependency function to get database session
-    Usage in FastAPI endpoints: db: Session = Depends(get_db)
+    Database session dependency for FastAPI endpoints.
+    Usage: db: Session = Depends(get_db)
     """
     db = SessionLocal()
     try:

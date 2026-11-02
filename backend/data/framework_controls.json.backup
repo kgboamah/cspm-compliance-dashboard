@@ -1,0 +1,194 @@
+[
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.5.1",
+    "title": "Policies for Information Security",
+    "description": "Management direction and support for information security",
+    "category": "Information Security Policies",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.2",
+    "title": "User Access Management",
+    "description": "Ensure authorized user access and prevent unauthorized access",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.4",
+    "title": "System and Application Access Control",
+    "description": "Prevent unauthorized access to systems and applications",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.10.1",
+    "title": "Cryptographic Controls",
+    "description": "Ensure proper and effective use of cryptography to protect information",
+    "category": "Cryptography",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.4",
+    "title": "Logging and Monitoring",
+    "description": "Record events and generate evidence",
+    "category": "Operations Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.13.1",
+    "title": "Network Security Management",
+    "description": "Ensure protection of information in networks",
+    "category": "Communications Security",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.AM-1",
+    "title": "Physical devices and systems within the organization are inventoried",
+    "description": "Asset Management",
+    "category": "Identify",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.AM-2",
+    "title": "Software platforms and applications within the organization are inventoried",
+    "description": "Asset Management",
+    "category": "Identify",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-1",
+    "title": "Identities and credentials are issued, managed, verified, revoked, and audited",
+    "description": "Identity Management and Access Control",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-4",
+    "title": "Access permissions and authorizations are managed",
+    "description": "Identity Management and Access Control",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-5",
+    "title": "Network integrity is protected",
+    "description": "Network segregation and isolation",
+    "category": "Protect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.DS-1",
+    "title": "Data-at-rest is protected",
+    "description": "Data Security",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.AE-3",
+    "title": "Event data are collected and correlated from multiple sources and sensors",
+    "description": "Security Continuous Monitoring",
+    "category": "Detect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "1.1.1",
+    "title": "Install and maintain firewall configuration",
+    "description": "Network security controls",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "1.2.1",
+    "title": "Restrict inbound and outbound traffic",
+    "description": "Restrict connections between untrusted networks and system components",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "2.1",
+    "title": "Change vendor-supplied defaults",
+    "description": "Do not use vendor-supplied defaults for system passwords and other security parameters",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "3.4",
+    "title": "Render PAN unreadable",
+    "description": "Render Primary Account Number unreadable anywhere it is stored",
+    "category": "Protect Cardholder Data",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "7.1",
+    "title": "Limit access to system components and cardholder data",
+    "description": "Limit access to only those with job-related need",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.2.1",
+    "title": "Strong authentication for users",
+    "description": "Verify user identity before modifying authentication credentials",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "10.1",
+    "title": "Audit trails",
+    "description": "Implement audit trails to link all access to system components",
+    "category": "Regularly Monitor and Test Networks",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.1",
+    "title": "Maintain current contact details",
+    "description": "Ensure contact email and telephone details are current",
+    "category": "Identity and Access Management",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.4",
+    "title": "No root account access keys",
+    "description": "Ensure no root account access key exists",
+    "category": "Identity and Access Management",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "2.1.1",
+    "title": "Deny public access to S3 buckets",
+    "description": "Ensure all S3 buckets employ encryption-at-rest",
+    "category": "Storage",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.1",
+    "title": "CloudTrail enabled in all regions",
+    "description": "Ensure CloudTrail is enabled in all regions",
+    "category": "Logging",
+    "severity": "High"
+  }
+]

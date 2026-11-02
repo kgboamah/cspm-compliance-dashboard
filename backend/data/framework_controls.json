@@ -1,0 +1,922 @@
+[
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.5.1",
+    "title": "Policies for Information Security",
+    "description": "Management direction and support for information security",
+    "category": "Information Security Policies",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.6.1",
+    "title": "Internal Organization",
+    "description": "Establish information security roles and responsibilities",
+    "category": "Organization of Information Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.8.1",
+    "title": "Responsibility for Assets",
+    "description": "Identify and maintain inventory of assets",
+    "category": "Asset Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.1",
+    "title": "Business Requirements for Access Control",
+    "description": "Limit access to information and information processing facilities",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.2",
+    "title": "User Access Management",
+    "description": "Ensure authorized user access and prevent unauthorized access",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.3",
+    "title": "User Responsibilities",
+    "description": "Users accountable for safeguarding authentication information",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.9.4",
+    "title": "System and Application Access Control",
+    "description": "Prevent unauthorized access to systems and applications",
+    "category": "Access Control",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.10.1",
+    "title": "Cryptographic Controls",
+    "description": "Ensure proper and effective use of cryptography",
+    "category": "Cryptography",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.11.1",
+    "title": "Secure Areas",
+    "description": "Prevent unauthorized physical access",
+    "category": "Physical and Environmental Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.1",
+    "title": "Operational Procedures and Responsibilities",
+    "description": "Ensure correct and secure operations",
+    "category": "Operations Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.2",
+    "title": "Protection from Malware",
+    "description": "Ensure information and information processing facilities are protected from malware",
+    "category": "Operations Security",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.3",
+    "title": "Backup",
+    "description": "Protect against loss of data",
+    "category": "Operations Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.4",
+    "title": "Logging and Monitoring",
+    "description": "Record events and generate evidence",
+    "category": "Operations Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.12.6",
+    "title": "Technical Vulnerability Management",
+    "description": "Prevent exploitation of technical vulnerabilities",
+    "category": "Operations Security",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.13.1",
+    "title": "Network Security Management",
+    "description": "Ensure protection of information in networks",
+    "category": "Communications Security",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.13.2",
+    "title": "Information Transfer",
+    "description": "Maintain security of information transferred within an organization",
+    "category": "Communications Security",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.14.1",
+    "title": "Security Requirements of Information Systems",
+    "description": "Ensure information security is designed and implemented in development lifecycle",
+    "category": "System Acquisition, Development and Maintenance",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.16.1",
+    "title": "Management of Information Security Incidents",
+    "description": "Ensure consistent and effective approach to management of information security incidents",
+    "category": "Information Security Incident Management",
+    "severity": "High"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.17.1",
+    "title": "Information Security Continuity",
+    "description": "Embed information security continuity in organization's business continuity management systems",
+    "category": "Information Security Aspects of Business Continuity Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "ISO 27001",
+    "control_id": "A.18.1",
+    "title": "Compliance with Legal and Contractual Requirements",
+    "description": "Avoid breaches of legal, statutory, regulatory or contractual obligations",
+    "category": "Compliance",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.AM-1",
+    "title": "Physical devices and systems are inventoried",
+    "description": "Asset Management",
+    "category": "Identify",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.AM-2",
+    "title": "Software platforms and applications are inventoried",
+    "description": "Asset Management",
+    "category": "Identify",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.AM-3",
+    "title": "Organizational communication and data flows are mapped",
+    "description": "Asset Management",
+    "category": "Identify",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.GV-1",
+    "title": "Organizational information security policy is established",
+    "description": "Governance",
+    "category": "Identify",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.GV-3",
+    "title": "Legal and regulatory requirements are understood",
+    "description": "Governance",
+    "category": "Identify",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "ID.RA-1",
+    "title": "Asset vulnerabilities are identified",
+    "description": "Risk Assessment",
+    "category": "Identify",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-1",
+    "title": "Identities and credentials are managed",
+    "description": "Identity Management and Access Control",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-3",
+    "title": "Remote access is managed",
+    "description": "Identity Management and Access Control",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-4",
+    "title": "Access permissions are managed",
+    "description": "Identity Management and Access Control",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AC-5",
+    "title": "Network integrity is protected",
+    "description": "Network segregation and isolation",
+    "category": "Protect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.AT-1",
+    "title": "Users are informed and trained",
+    "description": "Awareness and Training",
+    "category": "Protect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.DS-1",
+    "title": "Data-at-rest is protected",
+    "description": "Data Security",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.DS-2",
+    "title": "Data-in-transit is protected",
+    "description": "Data Security",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.DS-5",
+    "title": "Protections against data leaks",
+    "description": "Data Security",
+    "category": "Protect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.IP-1",
+    "title": "Baseline configuration is created and maintained",
+    "description": "Information Protection Processes and Procedures",
+    "category": "Protect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "PR.PT-1",
+    "title": "Audit/log records are determined and documented",
+    "description": "Protective Technology",
+    "category": "Protect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.AE-1",
+    "title": "Baseline of network operations is established",
+    "description": "Anomalies and Events",
+    "category": "Detect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.AE-2",
+    "title": "Detected events are analyzed",
+    "description": "Anomalies and Events",
+    "category": "Detect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.AE-3",
+    "title": "Event data are collected and correlated",
+    "description": "Security Continuous Monitoring",
+    "category": "Detect",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.CM-1",
+    "title": "Network is monitored to detect potential cybersecurity events",
+    "description": "Security Continuous Monitoring",
+    "category": "Detect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.CM-4",
+    "title": "Malicious code is detected",
+    "description": "Security Continuous Monitoring",
+    "category": "Detect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "DE.CM-7",
+    "title": "Monitoring for unauthorized personnel, connections, and devices",
+    "description": "Security Continuous Monitoring",
+    "category": "Detect",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "RS.AN-1",
+    "title": "Notifications from detection systems are investigated",
+    "description": "Analysis",
+    "category": "Respond",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "RS.CO-2",
+    "title": "Incidents are reported",
+    "description": "Communications",
+    "category": "Respond",
+    "severity": "High"
+  },
+  {
+    "framework_name": "NIST CSF",
+    "control_id": "RC.RP-1",
+    "title": "Recovery plan is executed during or after event",
+    "description": "Recovery Planning",
+    "category": "Recover",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "1.1.1",
+    "title": "Install and maintain firewall configuration",
+    "description": "Network security controls",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "1.2.1",
+    "title": "Restrict inbound and outbound traffic",
+    "description": "Restrict connections between untrusted networks",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "1.3.1",
+    "title": "Implement DMZ",
+    "description": "Implement DMZ to limit inbound traffic",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "2.1",
+    "title": "Change vendor-supplied defaults",
+    "description": "Do not use vendor defaults for passwords",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "2.2",
+    "title": "Configure system security parameters",
+    "description": "Develop configuration standards for system components",
+    "category": "Build and Maintain a Secure Network",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "3.4",
+    "title": "Render PAN unreadable",
+    "description": "Render Primary Account Number unreadable",
+    "category": "Protect Cardholder Data",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "3.5",
+    "title": "Document and implement procedures to protect keys",
+    "description": "Protect cryptographic keys",
+    "category": "Protect Cardholder Data",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "6.2",
+    "title": "Protect systems from known vulnerabilities",
+    "description": "Install security patches in timely manner",
+    "category": "Maintain a Vulnerability Management Program",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "7.1",
+    "title": "Limit access to system components",
+    "description": "Limit access to only those with job-related need",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "7.2",
+    "title": "Assign unique ID",
+    "description": "Assign unique ID to each person with computer access",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.1",
+    "title": "User identification",
+    "description": "Assign unique ID to users",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.2.1",
+    "title": "Strong authentication for users",
+    "description": "Verify user identity before modifying credentials",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.2.3",
+    "title": "Password requirements",
+    "description": "Passwords must meet minimum length and complexity",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.2.4",
+    "title": "Change passwords periodically",
+    "description": "Change user passwords at least every 90 days",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "8.3",
+    "title": "Multi-factor authentication",
+    "description": "Incorporate multi-factor authentication for remote access",
+    "category": "Implement Strong Access Control Measures",
+    "severity": "High"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "10.1",
+    "title": "Audit trails",
+    "description": "Implement audit trails to link access to system components",
+    "category": "Regularly Monitor and Test Networks",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "10.2",
+    "title": "Automated audit trails for system components",
+    "description": "Implement automated audit trails",
+    "category": "Regularly Monitor and Test Networks",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "10.3",
+    "title": "Record audit trail entries",
+    "description": "Record at minimum required audit trail entries",
+    "category": "Regularly Monitor and Test Networks",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "PCI-DSS",
+    "control_id": "11.4",
+    "title": "Intrusion detection and prevention",
+    "description": "Use intrusion-detection and/or intrusion-prevention",
+    "category": "Regularly Monitor and Test Networks",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.1",
+    "title": "Maintain current contact details",
+    "description": "Ensure contact details are current",
+    "category": "Identity and Access Management",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.2",
+    "title": "Security contact information",
+    "description": "Ensure security contact information is registered",
+    "category": "Identity and Access Management",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.4",
+    "title": "No root account access keys",
+    "description": "Ensure no root account access key exists",
+    "category": "Identity and Access Management",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.5",
+    "title": "MFA for root account",
+    "description": "Ensure MFA is enabled for root account",
+    "category": "Identity and Access Management",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.6",
+    "title": "Hardware MFA for root",
+    "description": "Ensure hardware MFA is enabled for root account",
+    "category": "Identity and Access Management",
+    "severity": "Critical"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.10",
+    "title": "MFA for console access",
+    "description": "Ensure multi-factor authentication for console users",
+    "category": "Identity and Access Management",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.11",
+    "title": "Temporary credentials for third-party access",
+    "description": "Use temporary security credentials for third-party access",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.12",
+    "title": "Root account not used for daily activities",
+    "description": "Ensure credentials unused for 45 days or greater are disabled",
+    "category": "Identity and Access Management",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.14",
+    "title": "Password policy minimum length",
+    "description": "Ensure IAM password policy requires minimum length of 14 or greater",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.15",
+    "title": "Password policy prevents reuse",
+    "description": "Ensure IAM password policy prevents password reuse",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.16",
+    "title": "Attach IAM policies to groups or roles",
+    "description": "Ensure IAM policies attached only to groups or roles",
+    "category": "Identity and Access Management",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.17",
+    "title": "Support role created for incident management",
+    "description": "Maintain current contact details for security incidents",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.19",
+    "title": "Expired SSL/TLS certificates",
+    "description": "Ensure all expired SSL/TLS certificates are removed",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.20",
+    "title": "Access Analyzer enabled",
+    "description": "Ensure that IAM Access Analyzer is enabled",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.21",
+    "title": "Password policy complexity",
+    "description": "Ensure IAM password policy requires uppercase letters",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "1.22",
+    "title": "Password policy expiration",
+    "description": "Ensure IAM password policy expires passwords within 90 days",
+    "category": "Identity and Access Management",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "2.1.1",
+    "title": "S3 bucket encryption",
+    "description": "Ensure all S3 buckets employ encryption-at-rest",
+    "category": "Storage",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "2.1.2",
+    "title": "S3 bucket public access",
+    "description": "Ensure S3 bucket policy denies public access",
+    "category": "Storage",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "2.1.5",
+    "title": "S3 account level public access blocks",
+    "description": "Ensure that S3 buckets are configured with 'Block public access'",
+    "category": "Storage",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "2.2.1",
+    "title": "EBS volume encryption",
+    "description": "Ensure EBS volume encryption is enabled by default",
+    "category": "Storage",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.1",
+    "title": "CloudTrail enabled in all regions",
+    "description": "Ensure CloudTrail is enabled in all regions",
+    "category": "Logging",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.2",
+    "title": "CloudTrail log file validation",
+    "description": "Ensure CloudTrail log file validation is enabled",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.3",
+    "title": "CloudTrail S3 bucket logging",
+    "description": "Ensure S3 bucket used for CloudTrail logs is not publicly accessible",
+    "category": "Logging",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.4",
+    "title": "CloudTrail integrated with CloudWatch",
+    "description": "Ensure CloudTrail trails are integrated with CloudWatch Logs",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.5",
+    "title": "AWS Config enabled",
+    "description": "Ensure AWS Config is enabled in all regions",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.6",
+    "title": "S3 bucket access logging",
+    "description": "Ensure S3 bucket access logging is enabled",
+    "category": "Logging",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.7",
+    "title": "CloudTrail logs encrypted with KMS",
+    "description": "Ensure CloudTrail logs are encrypted at rest using KMS CMKs",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.8",
+    "title": "KMS key rotation",
+    "description": "Ensure rotation for customer created CMKs is enabled",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.9",
+    "title": "VPC Flow Logs enabled",
+    "description": "Ensure VPC flow logging is enabled in all VPCs",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.10",
+    "title": "Object-level logging for S3",
+    "description": "Ensure object-level logging for write events is enabled for S3",
+    "category": "Logging",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "3.11",
+    "title": "Object-level logging for S3 read",
+    "description": "Ensure object-level logging for read events is enabled for S3",
+    "category": "Logging",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.1",
+    "title": "Unauthorized API calls",
+    "description": "Ensure log metric filter and alarm for unauthorized API calls",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.2",
+    "title": "Console sign-in without MFA",
+    "description": "Ensure log metric filter and alarm for console sign-in without MFA",
+    "category": "Monitoring",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.3",
+    "title": "Root account usage",
+    "description": "Ensure log metric filter and alarm for usage of root account",
+    "category": "Monitoring",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.4",
+    "title": "IAM policy changes",
+    "description": "Ensure log metric filter and alarm for IAM policy changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.5",
+    "title": "CloudTrail configuration changes",
+    "description": "Ensure log metric filter and alarm for CloudTrail config changes",
+    "category": "Monitoring",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.6",
+    "title": "Console authentication failures",
+    "description": "Ensure log metric filter and alarm for console authentication failures",
+    "category": "Monitoring",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.7",
+    "title": "Customer managed key disabling",
+    "description": "Ensure log metric filter and alarm for disabling or deletion of KMS CMK",
+    "category": "Monitoring",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.8",
+    "title": "S3 bucket policy changes",
+    "description": "Ensure log metric filter and alarm for S3 bucket policy changes",
+    "category": "Monitoring",
+    "severity": "Low"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.9",
+    "title": "AWS Config configuration changes",
+    "description": "Ensure log metric filter and alarm for AWS Config config changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.10",
+    "title": "Security group changes",
+    "description": "Ensure log metric filter and alarm for security group changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.11",
+    "title": "Network ACL changes",
+    "description": "Ensure log metric filter and alarm for changes to Network ACLs",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.12",
+    "title": "Network gateway changes",
+    "description": "Ensure log metric filter and alarm for changes to network gateways",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.13",
+    "title": "Route table changes",
+    "description": "Ensure log metric filter and alarm for route table changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.14",
+    "title": "VPC changes",
+    "description": "Ensure log metric filter and alarm for VPC changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "4.15",
+    "title": "Organizations changes",
+    "description": "Ensure log metric filter and alarm for AWS Organizations changes",
+    "category": "Monitoring",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "5.1",
+    "title": "Default security group restricts traffic",
+    "description": "Ensure no security groups allow ingress from 0.0.0.0/0 to port 22",
+    "category": "Networking",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "5.2",
+    "title": "Network ACLs restrict",
+    "description": "Ensure default security group of VPC restricts all traffic",
+    "category": "Networking",
+    "severity": "High"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "5.3",
+    "title": "VPC peering least access",
+    "description": "Ensure routing tables for VPC peering are least access",
+    "category": "Networking",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "5.4",
+    "title": "AWS Network Firewall deployed",
+    "description": "Ensure AWS Network Firewall is deployed for enhanced security",
+    "category": "Networking",
+    "severity": "Medium"
+  },
+  {
+    "framework_name": "CIS AWS",
+    "control_id": "5.6",
+    "title": "EC2 instances in public subnets",
+    "description": "Ensure EC2 instances should not have public IP addresses",
+    "category": "Networking",
+    "severity": "Medium"
+  }
+]
